@@ -1,0 +1,3434 @@
+@import 'variables';
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('fonts/Raleway.eot');
+  src: url('fonts/Raleway.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Raleway.woff') format('woff'),
+  url('fonts/Raleway.ttf') format('truetype'),
+  url('fonts/Raleway.svg#Raleway') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/PTSans.eot');
+  src: url('fonts/PTSans.eot?#iefix') format('embedded-opentype'),
+  url('fonts/PTSans.woff') format('woff'),
+  url('fonts/PTSans.ttf') format('truetype'),
+  url('fonts/PTSans.svg#PTSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.ptsans {
+  font-family: 'PTSans', sans-serif;
+}
+
+
+/* ==========================================================================
+   Content color style
+   ========================================================================== */
+
+body {
+  background-color: $color5;
+  font-family: "PTSans";
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.boxed {
+  max-width: 1170px;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: $default_font;
+  font-weight: 400;
+  color: #444444;
+}
+
+a {
+  color: #656565;
+  @include transition(all, 0.3s, ease);
+}
+
+a:hover, a:focus {
+  color: $color3;
+}
+
+p {
+  color: #555;
+  font-family: "PTSans";
+}
+
+.icon-1half {
+  font-size: 1.5em;
+}
+
+.block {
+  padding: 30px 0;
+  @include animate;
+  position: relative;
+  overflow: hidden;
+}
+
+// We'll add padding to the top and bottom of each block, to separate each from the adjacent ones.
+.btn-home {
+  color: $color5;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  background-color: $color1_5;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color4;
+    color: $color4;
+    border-color: $color4;
+  }
+}
+
+.btn-read {
+  border: 1px solid $color2_7;
+  color: $color2;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin: 10px auto 20px;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color5;
+    color: $color4;
+    border-color: $color5;
+  }
+}
+
+blockquote p, .block-form blockquote p {
+  color: $color1;
+  font-size: 16px;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.text-error {
+  position: absolute;
+  top: 0;
+  margin-left: 5px;
+  font-size: 30px;
+  color: red;
+}
+
+.color-active {
+  color: $color4;
+}
+
+.fa-rotate-45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* ==========================================================================
+Revolution slider
+========================================================================== */
+.revolution-container {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.revolution {
+  width: 100%;
+  position: relative;
+
+}
+
+/* ==========================================================================
+   Header styles
+   ========================================================================== */
+#header.light-header {
+  .header-top-row {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .top-welcome {
+    p {
+      color: $color1;
+    }
+  }
+
+  #account-menu {
+    .account-menu-title {
+      color: $color1;
+
+      &:hover {
+        color: $color6;
+      }
+    }
+
+    .account-menu-item {
+      background-color: $color5;
+
+      a {
+        color: $color1;
+        border-color: $color2_7;
+
+        &:hover {
+          color: $color5;
+        }
+      }
+    }
+  }
+
+  #currency {
+    .currency-title {
+      color: $color1;
+
+      &:hover {
+        color: $color6;
+      }
+    }
+
+    .currency-item {
+      background-color: $color5;
+    }
+  }
+
+  .header-main {
+    .header-main-block1 {
+      background-color: $color5_9;
+    }
+
+    .top-search-form {
+      form {
+        input {
+          background-color: $color5_9;
+        }
+
+        button {
+          color: $color1_7;
+        }
+      }
+    }
+  }
+
+  .top-icons {
+    .top-icon {
+      background-color: $color5_9;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+
+      i {
+        color: $color1_7;
+      }
+
+    }
+
+  }
+
+  .header-mini-cart {
+    background: url("../img/card2.png") no-repeat $color5_9 center right;
+
+    &:hover {
+      background-color: $color5_9;
+
+      a {
+        color: $color4;
+
+        span {
+          color: $color4_7;
+        }
+      }
+    }
+
+    a {
+      color: $color1_7;
+
+      span {
+        color: $color1_5;
+      }
+    }
+
+    .shopping-cart-content {
+      border: 1px solid $color5;
+      background-color: $color5;
+
+      .item {
+        background-color: $color2_3;
+
+        p {
+          color: $color1_7;
+        }
+
+        .trash {
+          i {
+            color: $color1_7;
+
+            &:hover {
+              color: $color4;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $color2_7;
+        }
+      }
+
+      .total {
+        color: $color1_7;
+
+        a {
+          color: $color1_7;
+
+        }
+      }
+    }
+
+  }
+
+  .header-main {
+    position: relative;
+
+    .header-main-block1 {
+      background-color: #fafafa;
+
+    }
+  }
+
+}
+
+#header.header-top-fixed {
+  position: fixed;
+  z-index: 50;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .header-main-fixed {
+    position: fixed;
+    top: 0;
+    display: block;
+    z-index: 9999;
+    width: 100%;
+  }
+}
+
+#header {
+  position: relative;
+  display: block;
+
+  .container {
+    position: relative;
+  }
+
+  .header-top-row {
+    width: 100%;
+    background-color: $color1_9;
+    position: relative;
+  }
+
+  .v-line {
+    width: 0;
+    border-left: 1px solid $color4;
+    height: 30px;
+    float: right;
+  }
+
+  .top-welcome {
+    p {
+      line-height: 40px;
+      color: $color2_5;
+      font-family: $default_font;
+      margin: 0;
+      font-size: 13px;
+      text-align: left;
+
+      i {
+        color: $color4;
+      }
+    }
+  }
+
+  .socials-block {
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 0;
+        margin: 0;
+        float: right;
+
+        a {
+          display: block;
+          line-height: 40px;
+          text-align: center;
+          height: 40px;
+          width: 40px;
+          color: $color4;
+
+          &:hover, &.active {
+            color: $color5;
+            background-color: $color4;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  #account-menu {
+    font-family: $default_font;
+    font-size: 13px;
+    position: relative;
+
+    &.active {
+      .account-menu-title {
+        background-color: $color5;
+        text-decoration: none;
+
+        .fa-angle-down:before {
+          content: "\f106";
+        }
+      }
+
+      .account-menu-item {
+        top: 40px;
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    .account-menu-title {
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      height: 40px;
+      width: 100%;
+      padding: 0 15px;
+      color: $color2_5;
+      text-decoration: none;
+      @include transition(all, 0.3s, ease);
+
+      & .fa-angle-down {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        background-color: $color5;
+        color: $color2_5;
+        text-decoration: none;
+      }
+    }
+
+    .account-menu-item {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 150px;
+      width: 100%;
+      z-index: 1000;
+      opacity: 0;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+      background-color: $color1_9;
+      overflow: hidden;
+      @include transition(opacity, 0.3s, ease);
+      @include box-shadow(0, 3px, 5px, 0.1);
+
+      a {
+        display: block;
+        line-height: 38px;
+        border-top: 1px solid #2a2a2a;
+        text-align: left;
+        padding-left: 10px;
+        color: $color2_5;
+
+        &:hover {
+          background-color: $color4;
+          color: $color5;
+          text-decoration: none;
+        }
+
+        i:before {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  #currency {
+    font-family: $default_font;
+    font-size: 13px;
+    position: relative;
+
+    &.active {
+      .currency-title {
+        background-color: $color5;
+        text-decoration: none;
+
+        .fa-angle-down:before {
+          content: "\f106";
+        }
+      }
+
+      .currency-item {
+        top: 40px;
+        display: inline-block;
+        opacity: 1;
+      }
+    }
+
+    .currency-title {
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      height: 40px;
+      width: 100%;
+      padding: 0 15px;
+      color: $color2_5;
+      text-decoration: none;
+      @include transition(all, 0.3s, ease);
+
+      & .fa-angle-down {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        background-color: $color5;
+        color: $color2_5;
+        text-decoration: none;
+      }
+    }
+
+    .currency-item {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 300px;
+      width: 100%;
+      padding-top: 15px;
+      z-index: 1000;
+      opacity: 0;
+      background-color: $color1_9;
+      @include transition(opacity, 0.3s, ease);
+      @include box-shadow(0, 3px, 5px, 0.1);
+    }
+  }
+
+  .header-main {
+    .header-main-block1 {
+      background-color: $color1_5;
+
+    }
+
+    .top-search-form {
+      width: 100%;
+
+      form {
+        margin: 5px 0;
+        position: relative;
+
+        input {
+          border: none;
+          height: 40px;
+          padding: 0 10px;
+          background: none;
+          background-color: $color1_5;
+          outline: 0;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+
+          &:focus {
+            outline: 0;
+            box-shadow: none;
+            background-color: $color2;
+          }
+        }
+
+        button {
+          position: absolute;
+          right: 0;
+          top: 0;
+          border: none;
+          height: 40px;
+          width: 40px;
+          background: none;
+          color: $color2;
+          @include transition(all, 0.3s, ease);
+          font-size: 14px;
+
+          &:hover {
+            color: $color4;
+          }
+        }
+      }
+    }
+
+  }
+
+  #container-fixed {
+    margin: 5px 0;
+
+    @include transition(margin, 0.5s, ease);
+  }
+
+  .header-logo {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .navbar-main {
+    margin: 0;
+    border-radius: 0;
+    background-color: $color6_9;
+    border: none;
+  }
+
+  .header-main-fixed {
+    height: 100px;
+
+    .header-main-block1 {
+      background-color: $color1;
+    }
+
+  }
+
+  .header-mini-cart {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    right: 0;
+    text-align: center;
+    background: url("../img/card.png") no-repeat $color1_5 center right;
+    margin: 5px 0 0 5px;
+
+    &:hover {
+      background-color: $color4;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+      outline: 0;
+      text-shadow: none;
+      padding: 4px 40px 0 13px;
+      text-align: left;
+      color: $color2;
+      line-height: 14px;
+
+      span {
+        height: 20px;
+        font-size: 11px;
+        line-height: 20px;
+        color: #aaa;
+        display: block;
+        @include transition(all, 0.4s, ease);
+      }
+
+      &:hover {
+        color: $color5;
+
+        span {
+          color: $color5;
+        }
+      }
+    }
+
+    a[data-toggle="dropdown"] {
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    }
+
+    .shopping-cart-content {
+      padding: 10px;
+      margin: 5px 0 0 0;
+      border: 1px solid $color1_9;
+      border-radius: 0;
+      font-size: 12px;
+      z-index: 9999;
+      background-color: $color1_9;
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: 400px;
+
+      .item {
+        width: 216px;
+        height: 70px;
+        background-color: $color1_5;
+        margin-bottom: 5px;
+        position: relative;
+        font-family: "PTSans", Helvetica, sans-serif;
+
+        img {
+          height: 70px;
+        }
+
+        p {
+          padding: 0 5px;
+          margin: 0;
+          color: $color2_9;
+          font-size: 13px;
+          text-align: left;
+
+          strong {
+            font-size: 13px;
+          }
+        }
+
+        div {
+          margin-left: 70px;
+          position: relative;
+
+          a {
+            padding: 5px;
+          }
+        }
+
+        .trash {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          padding: 0;
+          float: right;
+
+          i {
+            text-decoration: none;
+            color: $color2;
+            min-width: 30px;
+            height: 70px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 70px;
+            font-size: 16px;
+
+            &:hover {
+              color: $color4;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $color1;
+        }
+      }
+
+      .total {
+        table {
+          border-collapse: collapse;
+          display: inline-block;
+          margin-bottom: 5px;
+          float: right;
+          width: 100%;
+        }
+
+        table td {
+          padding: 2px 2px 2px 10px;
+          text-align: right;
+        }
+
+        width: 100%;
+        color: $color2;
+
+        a {
+          padding: 7px 15px;
+          border-radius: 0;
+          color: $color2;
+          margin: 0 0 0 10px;
+
+          &:hover {
+            color: $color5;
+            background-color: $color4;
+            border-color: $color4;
+          }
+        }
+      }
+    }
+
+  }
+
+  .top-icons {
+    .top-icon {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      margin-left: 5px;
+      background-color: $color1_5;
+      margin-top: 5px;
+      position: relative;
+      @include transition(all, 0.3s, ease);
+      float: right;
+      border-radius: 35px;
+
+      a {
+        display: block;
+        height: 100%;
+      }
+
+      span {
+        position: absolute;
+        right: -2px;
+        top: -2px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        font-size: 8px;
+        line-height: 16px;
+        border-radius: 20px;
+        color: $color5;
+        background-color: $color3;
+
+      }
+
+      i {
+        color: $color2;
+        @include transition(all, 0.3s, ease);
+      }
+
+      &:hover {
+        border-color: $color4;
+        background-color: $color2;
+
+        i {
+          color: $color4;
+        }
+      }
+    }
+
+    i {
+      font-size: 16px;
+      color: $color1;
+      line-height: 40px;
+    }
+  }
+}
+
+/* ==========================================================================
+   Navbar styles
+   ========================================================================== */
+.navbar-main {
+  border: none;
+  margin: 0;
+  line-height: 22px;
+  min-height: 50px;
+  border-radius: 0;
+  position: relative;
+
+  .nav > .dropdown > a {
+    padding: 14px 20px 14px 15px;
+  }
+
+  .nav > li > a {
+    color: $color5;
+    padding: 14px 15px;
+    border-top: 2px solid transparent;
+    font-family: $default_font;
+    text-transform: uppercase;
+
+    i {
+      font-size: 10px;
+      position: absolute;
+      right: 12px;
+      bottom: 15px;
+    }
+
+  }
+
+  .nav > li > a > span, .dropdown-menu > li > a > span, .yamm-content ul > li span, .yamm-content h4 span {
+    position: absolute;
+    top: -10px;
+    right: 3px;
+    text-transform: uppercase;
+    color: $color5;
+    font-size: 10px;
+    line-height: 8px;
+    background-color: $color3;
+    padding: 5px 8px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-right: 5px solid transparent;
+      border-bottom: none;
+      border-top: 5px solid $color3;
+      border-left: 5px solid transparent;
+      left: 5px;
+      bottom: -5px;
+      z-index: 1;
+    }
+  }
+
+  .dropdown-menu {
+    border: none !important;
+    padding: 0;
+    border-radius: 0;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0 6px 12px rgba(79, 83, 103, .175);
+    box-shadow: 0 6px 12px rgba(79, 83, 103, .175);
+
+    li > a {
+      padding: 0 15px;
+      white-space: nowrap;
+      min-height: 32px;
+      line-height: 40px;
+      font-family: $default_font;
+      position: relative;
+    }
+  }
+
+  .dropdown-submenu {
+    position: relative;
+
+    &:hover:after {
+      color: $color4;
+    }
+  }
+
+  .dropdown-submenu:after {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 14px;
+    padding-left: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin: 0;
+
+  }
+
+  .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #f7f7f7;
+    color: $color4;
+  }
+
+  .nav.navbar-right .dropdown-menu {
+    right: 15px;
+  }
+
+  a.navbar-brand {
+    padding: 0 0 0 15px;
+    height: 30px;
+
+    i {
+      display: inline-block;
+      color: $color5;
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      text-align: center;
+      @include transition(all, 0.3s, ease);
+
+    }
+  }
+
+  .navbar-toggle {
+
+    background-color: $color1;
+    border-radius: 0;
+
+    .icon-bar {
+      background-color: $color5;
+    }
+  }
+
+  .navbar-collapse {
+    max-height: none;
+  }
+}
+
+.nav > li > a:hover, .nav > li > a.active, .nav .open > a:hover, .nav .open > a:focus, .nav > li > a:focus, .nav .open > a, .navbar-main .nav > li.open > a {
+  background-color: $color4;
+  color: $color5;
+  border-color: #f1f1f1;
+  -webkit-box-shadow: 0 012px rgba(79, 83, 103, .175);
+  box-shadow: 0 0 12px rgba(79, 83, 103, .175);
+
+  i {
+    color: $color5;
+  }
+
+}
+
+.yamm-content {
+  .header-section {
+    position: relative;
+    float: left;
+    min-width: 270px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+
+  ul > li {
+    min-height: 40px;
+    line-height: 40px;
+
+    i {
+      width: 17px;
+    }
+  }
+
+  .banner {
+    margin: 0;
+  }
+}
+
+/*============================== product section ===========================*/
+/*========== for light background ============*/
+.product.light {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 10px solid $color5;
+  margin: 5px auto;
+  overflow: hidden;
+  position: relative;
+  background-color: $color5;
+  @include box-shadow(0, 0, 2px, 0.15);
+
+  &:hover {
+    border-color: $color5;
+
+    .product-caption {
+      background-color: $color5;
+    }
+
+    .product-compare {
+      right: 10px;
+    }
+
+    .product-wishlist {
+      right: 10px;
+    }
+
+  }
+
+  .product-compare {
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    color: $color4;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    background-color: $color5_9;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    @include transition(all, .3s, ease);
+    line-height: 40px;
+    border: 1px solid $color4_5;
+    z-index: 103;
+    bottom: 10px;
+    right: -100px;
+
+    &:hover {
+      background-color: $color4_9;
+      color: $color5;
+    }
+  }
+
+  .product-wishlist {
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    color: $color4;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    background-color: $color5_9;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    @include transition(all, .4s, ease);
+    line-height: 40px;
+    border: 1px solid $color4_5;
+    z-index: 103;
+    bottom: 52px;
+    right: -100px;
+
+    &:hover {
+      background-color: $color4_9;
+      color: $color5;
+    }
+  }
+
+  .product-caption {
+    position: relative;
+    text-align: left;
+    padding: 10px 0 0;
+    background-color: $color5;
+
+
+    .product-name {
+      font-size: 14px;
+      padding: 0 0 5px;
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: $default_font;
+      color: $color1;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+
+    .block-name {
+      display: block;
+      //margin-right: 50px;
+    }
+
+    .product-cart {
+      color: $color5;
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+
+      a {
+        display: inline-block;
+        font-size: 19px;
+        text-align: center;
+        color: $color4;
+        -webkit-backface-visibility: hidden;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        @include transition(all, .3s, ease);
+        line-height: 40px;
+        border: 1px solid $color4_5;
+
+        &:hover {
+          background-color: $color4;
+          color: $color5;
+          border-color: $color4;
+        }
+      }
+    }
+
+    .product-price {
+      color: $color1_9;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0;
+
+      span {
+        color: $color1_5;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+    }
+
+
+  }
+
+  .product-rating {
+    width: 100%;
+    padding: 5px 0 3px;
+    position: relative;
+
+    .stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .stars span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block
+    }
+
+    .stars span.star.active:before {
+      content: "\f005";
+    }
+
+    .stars span.star:hover {
+      cursor: pointer
+    }
+
+    .stars span.star:before {
+      content: "\f006";
+      padding: 0 2px;
+      color: $color4_9;
+    }
+
+    .stars span.star:hover:before, .stars span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: $color4;
+    }
+
+    .review {
+      color: $color1_7;
+      font-size: 11px;
+      position: absolute;
+      left: 85px;
+      top: 7px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    color: $color1_7;
+  }
+
+  .product-new {
+    position: absolute;
+    font-size: 14px;
+    z-index: 5;
+    text-transform: uppercase;
+    height: 38px;
+    text-align: center;
+    line-height: 28px;
+    left: -25px;
+    top: -5px;
+    color: $color5;
+    background-color: $color3;
+    width: 80px;
+    padding-top: 10px;
+    @include transform(-45deg, 1, 0deg, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .product-sale {
+    position: absolute;
+    font-size: 14px;
+    z-index: 6;
+    height: 60px;
+    width: 60px;
+    @include border-radius(40px);
+    text-align: center;
+    padding: 17px;
+    right: 3px;
+    top: 3px;
+    line-height: 13px;
+    color: $color4;
+    border: 1px solid $color4_5;
+    background-color: $color5_9;
+    @include transition(all, 0.5s, ease);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+.figure-hover-overlay {
+  position: relative;
+  overflow: hidden;
+
+  .figure-href {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  .img-overlay {
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.figure-hover-overlay img {
+  position: relative;
+  @include transition(all, 0.5s, ease-out);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.img-overlay {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.product:hover .figure-hover-overlay img {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  @include transition(all, 0.4s, ease-out);
+
+}
+
+.product .figure-hover-overlay:hover .img-overlay {
+  opacity: 0;
+}
+
+.product.list {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 10px solid $color5;
+  margin: 5px auto;
+  overflow: hidden;
+  position: relative;
+  background-color: $color5;
+  @include box-shadow(0, 0, 7px, 0.15);
+
+  &:hover {
+    border-color: $color5;
+
+    .product-caption {
+      background-color: $color5;
+    }
+
+    @include box-shadow(0, 2px, 20px, 0.20);
+
+    .product-compare {
+      right: 10px;
+    }
+
+    .product-wishlist {
+      right: 10px;
+    }
+
+  }
+
+  .product-compare {
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    color: $color4;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    background-color: $color5_9;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    @include transition(all, .3s, ease);
+    line-height: 40px;
+    border: 1px solid $color4_5;
+    z-index: 5;
+    bottom: 10px;
+    right: -100px;
+
+    &:hover {
+      background-color: $color4_9;
+      color: $color5;
+    }
+  }
+
+  .product-wishlist {
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    color: $color4;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    background-color: $color5_9;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    @include transition(all, .4s, ease);
+    line-height: 40px;
+    border: 1px solid $color4_5;
+    z-index: 6;
+    bottom: 52px;
+    right: -100px;
+
+    &:hover {
+      background-color: $color4_9;
+      color: $color5;
+    }
+  }
+
+  .product-caption {
+    position: relative;
+    padding: 10px 0 0;
+    background-color: $color5;
+    text-align: left;
+
+    .product-name {
+      font-size: 14px;
+      padding: 5px 0 5px;
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: $default_font;
+      color: $color1;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+
+    .block-name {
+      display: block;
+    }
+
+    .product-cart {
+      color: $color5;
+      margin-bottom: 20px;
+
+      a {
+        display: inline-block;
+        font-size: 19px;
+        text-align: center;
+        color: $color4;
+        -webkit-backface-visibility: hidden;
+        padding: 0 15px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        @include transition(all, .3s, ease);
+        line-height: 40px;
+        border: 1px solid $color4_5;
+
+        &:hover {
+          background-color: $color4;
+          color: $color5;
+          border-color: $color4;
+        }
+      }
+    }
+
+    .product-price {
+      color: $color1_9;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0;
+
+      span {
+        color: $color1_5;
+        font-size: 13px;
+        text-decoration: line-through;
+      }
+    }
+
+
+  }
+
+  .product-rating {
+    width: 100%;
+    padding: 5px 0 3px;
+    position: relative;
+
+    .stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .stars span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block
+    }
+
+    .stars span.star.active:before {
+      content: "\f005";
+    }
+
+    .stars span.star:hover {
+      cursor: pointer
+    }
+
+    .stars span.star:before {
+      content: "\f006";
+      padding: 0 2px;
+      color: $color4_9;
+    }
+
+    .stars span.star:hover:before, .stars span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: $color4;
+    }
+
+    .review {
+      color: $color1_7;
+      font-size: 11px;
+      position: absolute;
+      left: 85px;
+      top: 7px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    color: $color1_7;
+    margin: 10px 0 20px;
+  }
+
+  .product-new {
+    position: absolute;
+    font-size: 14px;
+    z-index: 5;
+    height: 38px;
+    text-align: center;
+    line-height: 28px;
+    left: -25px;
+    top: -5px;
+    color: $color5;
+    background-color: $color3;
+    text-transform: uppercase;
+    width: 80px;
+    padding-top: 10px;
+    @include transform(-45deg, 1, 0deg, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .product-sale {
+    position: absolute;
+    font-size: 14px;
+    z-index: 6;
+    height: 60px;
+    width: 60px;
+    @include border-radius(40px);
+    text-align: center;
+    padding: 17px;
+    line-height: 13px;
+    right: 3px;
+    top: 3px;
+    color: $color4;
+    border: 1px solid $color4_5;
+    background-color: $color5_9;
+    @include transition(all, 0.5s, ease);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+/*============================== / product section ===========================*/
+
+
+/* ==========================================================================
+Header block of secondary pages
+========================================================================== */
+
+.breadcrumb {
+  margin: 0;
+  padding: 25px 0;
+  background: none;
+  display: inline-block;
+
+}
+
+.breadcrumb > li {
+  text-shadow: none;
+  margin-left: 5px;
+}
+
+.breadcrumb > li:first-child {
+  margin-left: 0;
+}
+
+.breadcrumb > li a {
+  color: $color1;
+  text-decoration: none;
+  font-family: $default_font;
+  font-size: 13px;
+
+  &:hover {
+    color: $color4;
+  }
+}
+
+.breadcrumb > li:after {
+  margin-left: 10px;
+  content: "\f105";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 12px;
+  color: $color1;
+}
+
+.breadcrumb > li + li:before {
+  content: "";
+  padding: 0;
+}
+
+.breadcrumb > li:last-child:after {
+  content: "";
+}
+
+.breadcrumb > .active {
+  color: $color4;
+  font-family: $default_font;
+  font-size: 13px;
+}
+
+
+/* ==========================================================================
+Shortcode
+========================================================================== */
+
+blockquote {
+  font-size: 14px;
+  border-color: $color2;
+  font-style: italic;
+}
+
+.alert {
+  border-radius: 0;
+
+  &.alert-success {
+    background-color: $color3;
+    border: none;
+    color: $color5;
+  }
+
+  &.alert-warning {
+    background-color: $color4;
+    border: none;
+    color: $color5;
+  }
+}
+
+/* ==========================================================================
+   All Block styles
+   ========================================================================== */
+.header-menu {
+  position: relative;
+  margin: 10px 0 0;
+
+  h4 {
+    a {
+      text-align: left;
+      color: $color1;
+      text-transform: uppercase;
+      padding: 0 0 10px 15px;
+      border-bottom: 1px solid #ddd;
+      margin: 0;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
+
+.header-for-light {
+  margin-bottom: 10px;
+  position: relative;
+
+  h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 0;
+    font-weight: 600;
+  }
+
+  h1 span, h4 span {
+    color: $color4;
+  }
+
+  h3 {
+    text-align: right;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .header-bottom-line {
+    display: block;
+    border-bottom: 1px solid $color1_3;
+    height: 0;
+  }
+}
+
+.main-category-block {
+
+
+  .main-category-items {
+    position: relative;
+  }
+
+  .main-category-title {
+    position: relative;
+    height: 50px;
+    background-color: $color4;
+    font-size: 24px;
+    font-family: $default_font;
+    margin: 30px 0 25px;
+    color: $color5;
+
+    > i {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      background-color: $color3;
+      color: $color5;
+      text-align: center;
+      margin-right: 10px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-right: 8px solid transparent;
+        border-bottom: none;
+        border-top: 8px solid $color3;
+        border-left: 8px solid transparent;
+        left: 16px;
+        bottom: -8px;
+        z-index: 1;
+      }
+    }
+
+  }
+
+  .main-category-list {
+    background-color: $color5;
+
+    .with-dropdown > a:after {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      font-size: 14px;
+      padding-left: 15px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .with-dropdown .dropdown-menu {
+      left: 100%;
+      top: 0;
+      padding: 0;
+      width: 600px;
+    }
+
+    .with-dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu {
+      ul {
+        float: left;
+
+        li a:hover {
+          color: $color4;
+        }
+      }
+
+      @include box-shadow(2px, 2px, $color2, 0.5);
+      border-radius: 0;
+      border-color: $color2;
+      background-color: $color5;
+      margin: 0;
+
+      li {
+        border: none;
+        margin-bottom: 0;
+
+        a {
+          padding: 12px 15px;
+          min-width: 250px;
+        }
+
+        h4 {
+          padding: 15px 0 14px;
+          text-transform: uppercase;
+          color: $color1;
+          margin: 0 15px;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: -1px;
+      border: 1px solid $color2;
+      font-size: 16px;
+      line-height: 24px;
+
+      a {
+        position: relative;
+        display: block;
+        padding: 12px 10px 12px 64px;
+        font-family: $default_font;
+
+        i {
+          position: absolute;
+          z-index: 1;
+          top: -1px;
+          bottom: -1px;
+          left: -1px;
+          width: 50px;
+          font-size: 24px;
+          line-height: 50px;
+          text-align: center;
+          color: #fff;
+        }
+
+        &:hover {
+          text-decoration: none;
+          color: $color4;
+
+          i {
+            background: $color4;
+          }
+        }
+      }
+    }
+
+    li:nth-child(odd) i {
+      background: #999;
+    }
+
+    i {
+      background: $color1_7;
+    }
+  }
+}
+
+.title-block {
+  position: relative;
+  text-align: center;
+
+  &.light {
+    h1 {
+      color: $color1;
+    }
+
+    p {
+      color: $color1_7;
+    }
+
+    .toolbar-for-light {
+      width: 85px;
+
+      a {
+        border-color: $color1_3;
+        color: $color1_3;
+
+
+        &:hover {
+          border-color: $color4;
+          color: $color5;
+          background-color: $color4;
+        }
+      }
+
+      .next {
+        float: none;
+      }
+    }
+  }
+
+  h2 {
+    color: $color3;
+  }
+
+  h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-top: 0;
+    color: $color5;
+  }
+
+  p {
+    color: $color2_7;
+  }
+
+  .icon {
+    margin: 20px 0;
+
+    i {
+      color: $color5;
+      text-align: center;
+      line-height: 90px;
+      font-size: 46px;
+      margin: auto;
+      display: block;
+      width: 90px;
+      height: 90px;
+      border-radius: 70px;
+      border: 1px solid $color2_5;
+      @include transition(all, 0.3s, ease);
+    }
+  }
+
+  .toolbar-for-light {
+    position: inherit;
+    margin: 20px auto;
+    width: 85px;
+
+    a {
+      border-color: $color2_7;
+      color: $color2_7;
+
+      &:hover {
+        background-color: $color5;
+        color: $color4;
+      }
+    }
+
+    .next {
+      float: none;
+    }
+  }
+
+  &:hover {
+    .icon i {
+      color: $color4;
+      background-color: $color5;
+    }
+  }
+}
+
+.widget-title {
+  position: relative;
+  height: 50px;
+  background-color: $color2;
+  font-size: 16px;
+  font-family: $default_font;
+  margin: 30px 0 20px;
+
+  i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: $color4;
+    color: $color5;
+    text-align: center;
+    margin-right: 10px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-right: 8px solid transparent;
+      border-bottom: none;
+      border-top: 8px solid $color4;
+      border-left: 8px solid transparent;
+      left: 16px;
+      bottom: -8px;
+      z-index: 1;
+    }
+  }
+}
+
+.widget-title.dark {
+  background-color: #222;
+  color: #aaa;
+}
+
+.widget-block.dark {
+  .product-name {
+    color: #aaa;
+  }
+
+  .product-price {
+    color: #aaa;
+
+    span {
+      color: #777;
+    }
+  }
+}
+
+.widget-block {
+  margin-bottom: 20px;
+
+  .product-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 0 5px;
+    display: block;
+    text-decoration: none;
+    font-family: $default_font;
+    color: $color1;
+
+    &:hover {
+      color: $color4;
+    }
+  }
+
+  .block-name {
+    display: inline-block;
+  }
+
+  .product-price {
+    color: $color1_9;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+
+    span {
+      color: $color1_5;
+      font-size: 13px;
+      text-decoration: line-through;
+    }
+  }
+
+  .product-rating {
+    width: 100%;
+    padding: 5px 0 3px;
+    position: relative;
+
+    .stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .stars span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block
+    }
+
+    .stars span.star.active:before {
+      content: "\f005";
+    }
+
+    .stars span.star:hover {
+      cursor: pointer
+    }
+
+    .stars span.star:before {
+      content: "\f006";
+      padding: 0 2px;
+      color: $color4_9;
+    }
+
+    .stars span.star:hover:before, .stars span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: $color4;
+    }
+
+    .review {
+      color: $color1_7;
+      font-size: 11px;
+      position: absolute;
+      left: 85px;
+      top: 7px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+
+}
+
+.tags {
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin: 3px;
+    font-size: 16px;
+    line-height: 40px;
+
+    a {
+      display: block;
+      padding: 0 20px;
+      background-color: $color2_7;
+      color: $color1_7;
+
+      &:hover {
+        text-decoration: none;
+        background-color: $color4;
+        color: $color5;
+      }
+    }
+  }
+}
+
+.catalog {
+  li {
+    margin-bottom: -1px;
+    border: 1px solid $color2;
+    font-size: 16px;
+    line-height: 24px;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 12px 10px 12px 64px;
+      font-family: $default_font;
+
+      i {
+        position: absolute;
+        z-index: 1;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        width: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $color2;
+        color: $color1;
+
+        i {
+          background: $color4;
+        }
+      }
+    }
+  }
+
+  li:nth-child(odd) i {
+    background: $color4_7;
+  }
+
+  i {
+    background: $color4_9;
+  }
+}
+
+.panel-group {
+  .panel-default {
+    border: none;
+    border-radius: 0;
+    margin-top: 0 !important;
+  }
+
+  .panel-heading {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .panel-body {
+    border-left: 1px solid $color2_5;
+    border-right: 1px solid $color2_5;
+  }
+
+  .panel-title {
+    margin-bottom: -1px;
+    border: 1px solid $color2;
+    font-size: 16px;
+    line-height: 24px;
+
+    a.collapsed {
+      &:before {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        z-index: 1;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        width: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+        color: $color5;
+        background-color: $color4_7;
+        @include transition(all, 0.3s, ease);
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 12px 10px 12px 64px;
+      font-family: $default_font;
+      background-color: $color2;
+
+      &:before {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        z-index: 1;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        width: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+        color: $color5;
+        background-color: $color4;
+        @include transition(all, 0.3s, ease);
+      }
+
+      &:hover {
+        text-decoration: none;
+        background: $color2;
+        color: $color1;
+
+        &:before {
+          background: $color4;
+        }
+      }
+    }
+
+    .collapsed {
+      background: $color5;
+
+      &:before {
+        background-color: $color4;
+      }
+    }
+
+  }
+}
+
+.block-pagination {
+  margin-bottom: 40px;
+
+  ul > .active > a,
+  ul > .active > span {
+    border-color: $color4;
+    color: $color5;
+    background-color: $color4;
+
+    &:hover {
+      background: $color4;
+      border-color: $color4;
+    }
+  }
+
+  ul > li > a:focus,
+  ul > li > a:hover {
+    border-color: $color4;
+    background: $color4;
+    color: $color5;
+  }
+
+  ul > li > a {
+    border: 1px solid $color2;
+    color: $color1_5;
+
+  }
+
+  ul > li:first-child {
+    a {
+
+      color: $color1;
+      border-radius: 0;
+
+      &:hover {
+        color: $color5;
+      }
+    }
+  }
+
+  ul > li:last-child {
+    a {
+      color: $color1;
+      border-radius: 0;
+
+      &:hover {
+        color: $color5;
+      }
+    }
+  }
+}
+
+.ul-side-category {
+  width: 100%;
+  list-style-position: inside;
+
+  li:nth-child(odd) i {
+    background: $color4_7;
+  }
+
+  i {
+    background: $color4_9;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 24px;
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: $color1;
+      position: relative;
+      display: block;
+      padding: 12px 10px 12px 64px;
+      font-family: $default_font;
+
+      i {
+        position: absolute;
+        z-index: 1;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        width: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $color4;
+
+        i {
+          background: $color4;
+        }
+      }
+    }
+
+    i {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  li:last-child {
+    border: none;
+  }
+
+  .sub-category {
+    display: none;
+    padding-left: 10px;
+  }
+}
+
+#owl-partners:hover .partner {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.partner {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 10px;
+  padding: 15px 30px 10px;
+  @include transition(all, 0.2s, ease);
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+#owl-partners:hover .partner:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.google-map {
+  height: 500px;
+}
+
+.block-form {
+  margin-bottom: 30px;
+
+  h3 {
+    margin: 10px 0;
+
+    i {
+      color: $color1_7;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    color: $color1_7;
+  }
+
+  textarea.form-control {
+    height: 100px;
+  }
+
+  hr {
+    border-color: $color2;
+  }
+
+  label {
+    margin: 10px 0 0;
+    color: $color1_7;
+    font-family: $default_font;
+    font-weight: 700;
+  }
+
+  .form-control {
+    border-radius: 0;
+    margin: 10px 0;
+    border-color: $color2;
+    height: 40px;
+  }
+
+  .btn-default-1 {
+    border-color: $color1_3;
+    background-color: $color5;
+    color: $color1_7;
+    margin: 5px 20px 10px 0;
+    display: inline-block;
+
+    &:hover {
+      border-color: $color4;
+      background-color: $color4;
+      color: $color5;
+    }
+  }
+}
+
+.box-border {
+  padding: 20px 30px;
+  background-color: $color5;
+  border: 1px solid $color2;
+  margin-bottom: 30px;
+
+  h3 {
+    margin: 10px 0;
+  }
+
+}
+
+.btn-default-1 {
+  border: 1px solid $color1_3;
+  color: $color5;
+  padding: 9px 20px;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color5;
+    color: $color4;
+    border-color: $color5;
+  }
+}
+
+/* ==========================================================================
+Page Shopping cart
+========================================================================== */
+
+.cart-table {
+  min-width: 300px;
+  margin-bottom: 40px;
+  background-color: $color5;
+  text-align: center;
+  overflow: hidden;
+
+  .product-rating {
+    width: 100%;
+    padding: 5px 0 3px;
+    position: relative;
+
+    .stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .stars span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block
+    }
+
+    .stars span.star.active:before {
+      content: "\f005";
+    }
+
+    .stars span.star:hover {
+      cursor: pointer
+    }
+
+    .stars span.star:before {
+      content: "\f006";
+      padding: 0 2px;
+      color: $color4_9;
+    }
+
+    .stars span.star:hover:before, .stars span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: $color4;
+    }
+
+    .review {
+      color: $color1_7;
+      font-size: 11px;
+      position: absolute;
+      left: 85px;
+      top: 7px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color1;
+
+    &:hover {
+      color: $color4;
+    }
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+
+    &:first-child {
+      padding-top: 5em;
+    }
+
+    &:last-child {
+      padding-bottom: 5em;
+    }
+
+    &:before {
+      content: attr(data-th) ": "; // who knew you could do this? The internet, that's who.
+      font-weight: bold;
+
+      // optional stuff to make it look nicer
+      width: 120px; // magic number :( adjust according to your own content
+      display: inline-block;
+      // end options
+
+      @media (min-width: 680px) {
+        display: none;
+      }
+    }
+  }
+
+  th, td {
+
+    text-align: center;
+    vertical-align: middle !important;
+    @media (min-width: 680px) {
+      display: table-cell;
+
+      padding: .25em 5em;
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+    }
+
+  }
+
+  th, td {
+    @media (min-width: 680px) {
+      padding: 1em !important;
+
+    }
+  }
+
+  th, td {
+    @media (max-width: 680px) {
+      text-align: left;
+    }
+  }
+
+  th, td:before {
+    color: $color1;
+  }
+
+  .card_product_image {
+    width: 100px;
+    background-color: $color2;
+
+    img {
+      width: 80px;
+    }
+  }
+
+  .card_product_quantity input {
+    width: 100px;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  .btn-default-1 {
+    color: $color1;
+
+    &:hover {
+      background-color: $color4;
+      color: $color5;
+    }
+  }
+
+}
+
+/* ==========================================================================
+Page Checkout
+========================================================================== */
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background-color: $color4;
+}
+
+.nav-pills {
+  margin-top: 10px;
+}
+
+.nav-pills > li > a {
+  background-color: $color2;
+  border-radius: 0;
+  font-size: 16px;
+
+  i {
+    font-size: 18px;
+    display: block;
+    height: 24px;
+  }
+
+  &:hover {
+    background-color: $color4;
+    color: $color5;
+
+    i {
+      color: $color5;
+    }
+
+    box-shadow: none;
+  }
+}
+
+.table-responsive .table .label {
+  background-color: $color4;
+}
+
+.table-responsive .table .new {
+  background-color: $color3;
+}
+
+/* ==========================================================================
+Page Blogs
+========================================================================== */
+.blog {
+  background-color: #f7f7f7;
+  border: 1px solid $color2;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+
+  &:hover {
+    @include box-shadow(0, 3px, 5px, 0.2);
+  }
+
+  .blog-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    line-height: 48px;
+    font-size: 12px;
+    color: $color4;
+    z-index: 5;
+    text-decoration: none;
+  }
+
+  .fa-comment {
+    display: block;
+    font-size: 26px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: $color4;
+    color: $color5;
+    z-index: 3;
+
+  }
+
+  .blog-caption {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 0 15px 10px 15px;
+
+    .post-information {
+      color: $color1_7;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 12px;
+
+      span {
+        padding-right: 10px;
+      }
+    }
+
+    .blog-name {
+      color: $color1;
+
+      &:hover {
+        color: $color4;
+        text-decoration: none;
+      }
+    }
+
+
+  }
+
+  figure {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .figure-hover-overlay {
+    position: relative;
+    overflow: hidden;
+    background-color: $color2;
+
+    .figure-href {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+  }
+
+  .figure-hover-overlay img {
+    position: relative;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 1.25s ease-out;
+    transition: 1.25s ease-out;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+  &:hover .figure-hover-overlay img {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 1.25s ease-out;
+    transition: 1.25s ease-out;
+  }
+
+  &:hover .figure-hover-overlay figcaption {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+    transition: transform 0.4s, opacity 0.1s;
+    color: #FFF !important;
+  }
+
+  .bar:before {
+    content: '';
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f7f7f7;
+    border-top: none;
+    border-left: 10px solid transparent;
+    left: 50%;
+    bottom: 0;
+    z-index: 10;
+    margin-left: -10px;
+
+  }
+
+  .btn-read {
+    color: $color1_7;
+    border-color: $color1_5;
+
+    &:hover {
+      color: $color5;
+      background-color: $color4;
+      border-color: $color4;
+    }
+  }
+}
+
+.media-heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.time-right {
+  float: right;
+  padding: 5px 20px;
+  font-size: 13px;
+  color: $color1;
+}
+
+.btn-right-post {
+  border: 1px solid $color1_5;
+  padding: 3px 20px;
+  float: right;
+  color: $color1_9;
+  font-size: 12px;
+  background-color: $color2;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $color4;
+    color: $color5;
+    border-color: $color4;
+  }
+}
+
+/* ==========================================================================
+Page Products grid
+========================================================================== */
+.block-products-modes {
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+
+  label {
+    line-height: 34px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .product-view-mode {
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 28px;
+      color: $color1_3;
+      vertical-align: middle;
+      line-height: 34px;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+
+    .active {
+      color: $color4;
+    }
+  }
+
+  select {
+    border-color: #ddd;
+  }
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+/* ==========================================================================
+Page Product details
+========================================================================== */
+.product-image {
+  overflow: hidden;
+  position: relative;
+}
+
+#product-zoom {
+  border: 1px solid #eaeaea;
+  width: 100%;
+}
+
+#gal1 {
+  position: relative;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  img {
+    border: 1px solid #eaeaea;
+
+    &:hover {
+      border-color: $color4;
+    }
+  }
+}
+
+.block-product-detail {
+  margin-bottom: 30px;
+
+}
+
+/*#review {
+  .product-rating {
+    padding: 5px 0 3px;
+    position: relative;
+    display: inline-block;
+
+    .stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .stars span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block
+    }
+
+    .stars span.star.active:before {
+      content: "\f005";
+    }
+
+    .stars span.star:hover {
+      cursor: pointer
+    }
+
+    .stars span.star:before {
+      content: "\f006";
+      padding: 0 2px;
+      color: $color4_9;
+    }
+
+    .stars span.star:hover:before, .stars span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: $color4;
+    }
+
+    .review {
+      color: $color1_7;
+      font-size: 11px;
+      position: absolute;
+      left: 85px;
+      top: 7px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+}*/
+
+.product-detail-section {
+  .clearfix {
+    padding: 5px 0 5px;
+  }
+
+  label {
+    color: $color1_5;
+  }
+
+  .product-information {
+    .form-control {
+      width: 120px;
+    }
+
+    .shopping-cart-buttons {
+      a {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 38px;
+        color: $color4;
+        border: 1px solid $color4_5;
+
+        &:hover {
+          background-color: $color4;
+          color: $color5;
+        }
+      }
+
+      .shoping {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 38px;
+        color: #eb2c33;
+        border: 1px solid rgba(235, 44, 51, 0.5);
+        width: 120px;
+        background-color: $color4;
+        color: $color5;
+      }
+    }
+  }
+
+  .product-price {
+    color: $color4;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
+
+    span {
+      color: #888;
+      font-size: 12px;
+      text-decoration: line-through;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color1;
+
+    &:hover {
+      color: $color4;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin: 5px 0;
+    color: $color1;
+  }
+
+  .product-rating {
+    width: 100%;
+    padding: 5px 0 3px;
+    position: relative;
+
+    .stars {
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .stars span.star {
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block
+    }
+
+    .stars span.star.active:before {
+      content: "\f005";
+    }
+
+    .stars span.star:hover {
+      cursor: pointer
+    }
+
+    .stars span.star:before {
+      content: "\f006";
+      padding: 0 2px;
+      color: $color4_9;
+    }
+
+    .stars span.star:hover:before, .stars span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: $color4;
+    }
+
+    .review {
+      color: $color1_7;
+      font-size: 11px;
+      position: absolute;
+      left: 85px;
+      top: 7px;
+      text-decoration: none;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    color: $color1_7;
+  }
+
+}
+
+/* ==========================================================================
+   Footer styles
+   ========================================================================== */
+.payment-service {
+  padding: 15px 10px;
+  text-align: left;
+  position: relative;
+  border: 1px solid $color1_3;
+  margin: 20px 0;
+  @include transition(all, 0.3s, ease);
+
+  &:hover {
+    border-color: $color4;
+    background-color: $color4;
+
+    i {
+      color: $color4;
+      background-color: $color5;
+      border-color: $color5;
+    }
+
+    h3 {
+      color: $color5;
+    }
+
+    p {
+      color: $color2;
+
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #aaa;
+  }
+
+  a {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  h3 {
+    margin: 5px 0 5px;
+  }
+
+  i {
+    color: $color5;
+    text-align: center;
+    line-height: 80px;
+    font-size: 42px;
+    margin: auto;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 70px;
+    border: 1px solid $color4;
+    background-color: $color4;
+    @include transition(all, 0.3s, ease);
+  }
+
+}
+
+.header-footer {
+  position: relative;
+  border-bottom: 1px solid #666;
+  margin-bottom: 10px;
+
+  h3 {
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #ccc;
+    font-family: $ptsans_font;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+.footer-information {
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.95);
+  font-size: 13px;
+
+  p {
+    color: #aaa;
+  }
+
+  a {
+    color: #aaa;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 20px;
+
+    &:hover {
+      color: $color5;
+    }
+  }
+
+  .footer-categories {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+
+}
+
+.social {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 40px 0 0 0;
+
+  .socials {
+    text-align: left;
+
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      margin: 20px 10px 20px 0;
+      text-decoration: none;
+      color: #ccc;
+      vertical-align: middle;
+      @include transition(all, .3s, ease);
+      line-height: 40px;
+      border: 1px solid #666;
+      font-size: 20px;
+
+      &:hover {
+        background-color: $color5;
+        color: $color4;
+        border-color: $color5;
+      }
+    }
+  }
+
+  form {
+    margin: 20px 0;
+    position: relative;
+
+    input {
+      border: 1px solid #666;
+      height: 40px;
+      padding: 5px 10px;
+      background: none;
+      color: $color2;
+
+    }
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: #aaa;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #aaa;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #aaa;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #aaa;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      border-left: none;
+      height: 40px;
+      width: 80px;
+      background: none;
+      color: $color2;
+      @include transition(all, 0.3s, ease);
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+}
+
+.footer-copy {
+  padding: 15px 0 5px;
+
+  a {
+    color: $color4;
+  }
+
+  .logo-copy {
+    display: inline-block;
+    width: 104px;
+    height: 52px;
+    background: url("../img/logo-copy-shop.png") no-repeat;
+    margin-right: 10px;
+  }
+
+  p {
+    display: inline-block;
+    height: 42px;
+    line-height: 16px;
+    border-left: 1px $color1 solid;
+    padding: 10px 0 0 10px;
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+  }
+}
+
+.footer-payments {
+  list-style: none;
+  padding: 10px 0 0 0;
+
+  li {
+    display: inline-block;
+    margin: 0 4px 8px;
+    float: inherit;
+  }
+}
+
+.want {
+  form {
+    margin: 20px 0;
+    position: relative;
+
+    textarea {
+      border: 1px solid #666;
+      height: 100px;
+      padding: 5px 10px;
+      background: none;
+      color: $color2;
+
+    }
+
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: #aaa;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #aaa;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #aaa;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #aaa;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-left: none;
+      border: none;
+      height: 40px;
+      width: 80px;
+      background: none;
+      color: $color2;
+      @include transition(all, 0.3s, ease);
+
+      &:hover {
+        color: $color4;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Block background style
+   ========================================================================== */
+.color-scheme-1 {
+  background-color: $color1;
+}
+
+.color-scheme-2 {
+  background-color: $color2;
+}
+
+.color-scheme-3 {
+  background-color: $color4;
+}
+
+.color-scheme-white-90 {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.color-scheme-dark-90 {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* ==========================================================================
+Backgrounds
+========================================================================== */
+
+.sale-section {
+  background-image: url("../img/bg/bg5.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.partners {
+  background-image: url("../img/bg/bg-part.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}

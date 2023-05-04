@@ -1,0 +1,129 @@
+/* Include LESS variables & mixins */
+@import "variables";
+
+@media (max-width: 991px) {
+  .socials-block {
+    float: left !important;
+  }
+  #header.header-top-fixed {
+    .dis-n {
+      display: block;
+    }
+  }
+  #header .header-main-fixed {
+    height: auto;
+    box-shadow: none;
+  }
+  #header .top-icons {
+    float: left;
+  }
+  #header .header-main-fixed .header-main-block1 {
+    background-color: $color1_5;
+  }
+  #header .header-logo {
+    text-align: center;
+  }
+  .payment-service {
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+  .main-category-block .main-category-list .with-dropdown .dropdown-menu {
+    position: relative;
+    left: -1px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) { /* Tablet Portrait and Mobile */
+
+
+  .nav-justified > li > a {
+    margin-bottom: 0;
+  }
+  #header .header-main .navbar-collapse {
+    z-index: 999;
+    position: relative;
+    background-color: $color1;
+
+    h4 {
+      color: $color2_9;
+    }
+
+    .dropdown-menu a {
+      color: $color2_5;
+
+      &:hover {
+        color: $color4;
+      }
+    }
+
+  }
+  .product-image {
+    margin-bottom: 30px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a {
+    height: 40px;
+    line-height: 30px;
+  }
+  #header .navbar-main .dropdown-submenu > .dropdown-menu {
+    position: relative;
+    left: 0;
+    padding-left: 30px;
+  }
+  .header-for-light h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .product.list .figure-hover-overlay img {
+    width: 100%;
+    max-width: none;
+  }
+
+}
+
+@media (max-width: 480px) { /* Mobile */
+
+  #header #currency .currency-item {
+    min-width: 200px;
+  }
+
+  #header .header-main .top-search-form {
+    width: 100%;
+    text-align: right;
+
+  }
+  .header-for-light h1 {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) { /* Mobile Landscape */
+  .product-image {
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) { /* Mobile Landscape */
+
+
+}
+
+@media (min-width: 320px) and (max-width: 479px) { /* Mobile Landscape */
+
+
+}
+
+@media (max-width: 319px) { /* Mobile Portrait */
+
+
+}
+
+
+

@@ -1,0 +1,26 @@
+Options +FollowSymLinks -MultiViews
+Options -Indexes
+RewriteBase /myamall.com/admin/
+RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} ^eandemarket.com [NC]
+#RewriteRule ^(.*)$ http://www.myamall.com/admin/$1 [L,R=301]
+
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.*?)_+[_-]*(.+?)\sHTTP [NC]
+#RewriteRule ^ /%1-%2 [L,NE,R=302]
+
+RewriteRule ^ajax/([a-z-]+)$ ajax/$1.php
+RewriteRule ^assets/js/script.js$ assets/js.php
+RewriteRule ^assets/css/style.css$ assets/css.php
+
+RewriteRule ^^([a-z-_]+)/(view|add|edit|delete|sort)/([0-9]+)/([a-z0-9]+)$ inc/load.php?name=$1&action=$2&id=$3&token=$4 [QSA]
+RewriteRule ^^([a-z-_]+)/(view|add|edit|delete|sort|clone)/([0-9]+)$ inc/load.php?name=$1&action=$2&id=$3 [QSA]
+RewriteRule ^^([a-z-_]+)/(view|add|edit|delete|sort)$ inc/load.php?name=$1&action=$2 [QSA]
+RewriteRule ^([a-z-]+)$ inc/load.php?name=$1 [QSA]
+
+ErrorDocument 404 /admin/inc/404.php
+ErrorDocument 403 /admin/inc/403.php
+ErrorDocument 500 /admin/inc/500.php

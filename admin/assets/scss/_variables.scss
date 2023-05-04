@@ -1,0 +1,14 @@
+$default_font_size: 14px;
+
+$default_color: #eb2c33;
+$default_hover_color: darken($default_color, 10%);
+$default_light_color: lighten($default_color, 60%);
+$tags_bg_color: lighten($default_color, 30%);
+
+$border_color: #dcdcdc;
+$border_light_color: lighten($border_color, 5%);
+
+$default_dark_bg: #231f20;
+
+$white_color: #fff;
+

@@ -1,0 +1,757 @@
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    overflow-x: hidden;
+    z-index: 99999;
+    display: block;
+}
+
+.preloader svg {
+    position: relative;
+    top: calc(50% - 45px);
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99999;
+    text-align: center;
+    display: none;
+}
+
+.loader .spinner {
+    position: relative;
+    top: calc(50% - 50px);
+}
+
+.m-t-0 {
+    margin-top: 0;
+}
+
+.m-t-5 {
+    margin-top: 5px;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.m-t-15 {
+    margin-top: 15px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-t-25 {
+    margin-top: 25px;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
+
+.m-b-0 {
+    margin-bottom: 0;
+}
+
+.m-b-5 {
+    margin-bottom: 5px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-b-15 {
+    margin-bottom: 15px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.m-l-5 {
+    margin-left: 5px;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-white:hover {
+    color: #ffffff;
+}
+
+
+.payment-step span.separator {
+    position: relative;
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.payment-step span.separator:before,
+.payment-step span.separator:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #011b33;
+    width: 100%;
+    top: 33px;
+    left: 0;
+}
+
+.payment-step span.separator strong {
+    position: relative;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 99;
+    color: #011b33;
+    font-size: 20px;
+}
+
+.revolution, .owl-carousel {
+    visibility: hidden;
+}
+
+.revolution.revslider-initialised, .owl-carousel.owl-loaded {
+    visibility: visible;
+}
+
+.revolution-container h1 {
+    position: relative;
+    font-size: 70px;
+    font-weight: bolder;
+    color: #eb2c33;
+}
+
+.revolution-container h2 {
+    position: relative;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.text-ellipsis {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+[id^="owl-products-"] .owl-nav {
+    position: absolute;
+    top: -48px;
+    right: 0;
+}
+
+
+[id^="owl-products-"] .owl-nav button.owl-prev, [id^="owl-products-"] .owl-nav button.owl-next {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 26px !important;
+    border: 1px rgba(14, 14, 14, 0.3) solid !important;
+    color: rgba(14, 14, 14, 0.3) !important;
+    float: left;
+    font-size: 22px !important;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: top;
+}
+
+[id^="owl-products-"] .owl-nav button.owl-next {
+    margin-left: 8px;
+}
+
+[id^="owl-products-"] .owl-nav button.owl-prev:hover, [id^="owl-products-"] .owl-nav button.owl-next:hover, [id^="owl-products-"] .owl-nav button.owl-prev:focus, [id^="owl-products-"] .owl-nav button.owl-next:focus {
+    border-color: rgba(14, 14, 14, 1) !important;
+    outline: 0 !important;
+}
+
+/*
+Checkbox
+*/
+/* Radio and Checkbox */
+.checkbox, .radio {
+    padding-left: 20px;
+    margin: 0 0 15px;
+}
+
+.checkbox.checkbox-inline, .checkbox.radio-inline, .radio.checkbox-inline, .radio.radio-inline {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.checkbox input, .radio input {
+    display: none;
+}
+
+.checkbox label:not(.error), .radio label:not(.error) {
+    position: relative;
+    padding-left: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7d7d7d;
+    min-height: 0;
+    line-height: normal;
+}
+
+.checkbox label:not(.error):before, .radio label:not(.error):before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    outline: none !important;
+    margin-left: -20px;
+    top: 1px;
+    border: 1px solid #eb2c33;
+    border-radius: 0;
+    background-color: transparent;
+    transition: border 0.5s ease-in-out;
+    -moz-transition: border 0.5s ease-in-out;
+    -ms-transition: border 0.5s ease-in-out;
+    -webkit-transition: border 0.5s ease-in-out;
+}
+
+.checkbox label:not(.error):after, .radio label:not(.error):after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    left: 3px;
+    top: 4px;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: #eb2c33;
+    transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -moz-transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -ms-transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    -webkit-transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+
+.checkbox input[type="checkbox"]:checked ~ label:not(.error)::after, .radio input[type='radio']:checked ~ label:not(.error)::after {
+    transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+}
+
+.checkbox-default input[type="checkbox"] ~ label:not(.error)::after, .radio-default input[type='radio'] ~ label:not(.error)::after {
+    background-color: #eb2c33;
+}
+
+.checkbox-default input[type="checkbox"]:checked ~ label:not(.error)::after, .radio-default input[type='radio']:checked ~ label:not(.error)::after {
+    background-color: #eb2c33;
+}
+
+.checkbox label::after, .checkbox label::before {
+    border-radius: 0;
+}
+
+.checkbox-default input[type="checkbox"][disabled] ~ label:not(.error), .checkbox-default input[type="checkbox"][disabled] ~ label:not(.error):before, .checkbox-default input[type="checkbox"][disabled] ~ label:not(.error):after {
+    opacity: .5;
+}
+
+/*input[type="radio"] ~ label.error, input[type="checkbox"] ~ label.error {
+    position: absolute;
+    left: 0;
+    width: max-content;
+}*/
+
+label.error {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    background: #ff0000;
+    max-width: 250px;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 12px;
+    z-index: 999;
+}
+
+label.error:before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    border-bottom: 5px solid #ff0000;
+    border-left: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+[class^="col-"] label.error, [class*="col-"] label.error {
+    right: 15px;
+}
+
+span.required {
+    position: absolute;
+    color: #ff0000;
+    font-size: 28px;
+    top: 5px;
+    margin-left: 5px;
+}
+
+p.size-info {
+    font-size: 12px !important;
+}
+
+p.size-info span + span {
+    border-left: 1px solid #ddd;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.header-for-light h2 a i {
+    font-size: 16px;
+}
+
+.classification li a {
+    position: relative;
+    display: block;
+    float: left;
+    border: 2px solid #000;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: #000;
+}
+
+.classification li a.size {
+    width: auto;
+    padding: 0 5px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.classification li a.active {
+    border-color: #eb2c33;
+}
+
+.classification li a.active:before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    color: #eb2c33;
+    background: rgba(0, 0, 0, .3);
+    z-index: 9;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.classification li a img {
+    position: relative;
+    padding: 5px;
+    max-width: 100%;
+}
+
+
+.classification li a.size.active:before {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 900;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-content .btn-default {
+    position: relative;
+    border-radius: 0;
+    background-color: #eb2c33;
+    border-color: #eb2c33;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: block;
+    float: right;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ie-transition: all ease .3s;
+    -o-transition: all ease .3s;
+}
+
+.modal-content .btn-default:hover, .modal-content .btn-default:focus {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-color: rgba(0, 0, 0, 0.95);
+}
+
+.tooltip {
+    text-transform: capitalize;
+}
+
+.mobile-product-menu {
+    display: none !important;
+}
+
+.owl-carousel {
+    z-index: 0;
+}
+
+.owl-carousel .owl-nav button {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 26px;
+    border: 1px solid rgba(14, 14, 14, 0.3) !important;
+    color: rgba(14, 14, 14, 0.3) !important;
+    float: left;
+    font-size: 22px !important;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: top;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    margin-left: 5px;
+}
+
+#owl-sale .owl-nav {
+    position: absolute;
+    top: -50px;
+    right: 0;
+}
+
+.products-carousel .owl-nav {
+    position: absolute;
+    top: -55px;
+    right: 15px;
+}
+
+.products-carousel .owl-nav button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, .9) !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+}
+
+.countdown span {
+    position: relative;
+    background: #eb2c33;
+    color: #fff;
+    display: inline-grid;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.countdown span.hours, .countdown span.mins {
+    background: #000000;
+}
+
+.countdown span b {
+    font-size: 30px;
+}
+
+.product-caption .sold {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+    background-color: #ffaa41;
+    border: 1px solid #ffaa41;
+    color: #000000;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.checkout-info {
+    position: relative;
+    display: block;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+.checkout-info a, .checkout-info span, .checkout-info strong, .checkout-info b {
+    line-height: 40px;
+}
+
+.checkout-info a, .checkout-info button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.checkout-info a:hover, .checkout-info button:hover {
+    background-color: #eb2c33;
+    color: #ffffff;
+}
+
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+#owl-category .category {
+    position: relative;
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
+
+#owl-category .category a {
+    text-decoration: none;
+}
+
+#owl-category .category h6 {
+    font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#owl-category .category img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background: #fff none repeat scroll 0 0;
+    transform: scale(1);
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ie-transition: all ease .3s;
+    -o-transition: all ease .3s;
+}
+
+#owl-category .category:hover img {
+    transform: scale(1.1);
+}
+
+#owl-category .category:hover img {
+    border-color: #eb2c33;
+}
+
+#owl-category .owl-nav .owl-next, #owl-category .owl-nav .owl-prev {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #FFFFFF !important;
+    top: 40px;
+    left: -35px;
+}
+
+#owl-category .owl-nav .owl-next {
+    left: auto;
+    right: -35px;
+}
+
+#owl-category .owl-nav .owl-next:hover, #owl-category .owl-nav .owl-prev:hover, #owl-category .owl-nav .owl-next:focus, #owl-category .owl-nav .owl-prev:focus {
+    background-color: #eb2c33;
+}
+
+.owl-carousel .owl-nav .owl-next.disabled, .owl-carousel .owl-nav .owl-prev.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+[id^="owl-products-"] {
+    margin-bottom: 30px;
+}
+
+.partners .header-for-light h1 {
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1200px) {
+    .revolution-container h1 {
+        font-size: 50px;
+    }
+
+    .revolution-container h2 {
+        font-size: 40px;
+    }
+
+    .countdown span {
+        max-width: 80px;
+        max-height: 80px;
+        width: 100%;
+        height: 100%;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .revolution-container h1 {
+        font-size: 40px;
+    }
+
+    .revolution-container h2 {
+        font-size: 30px;
+    }
+
+    #owl-category .owl-nav .owl-prev {
+        left: 0;
+    }
+
+    #owl-category .owl-nav .owl-next {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #owl-sale .owl-nav, [id^="owl-products-"] .owl-nav {
+        display: none;
+    }
+
+    .countdown span b {
+        font-size: 20px;
+    }
+
+    .desktop-product-menu {
+        display: none !important;
+    }
+
+    .mobile-product-menu {
+        display: block !important;
+    }
+
+    .header-top-fixed, .header-main-fixed {
+        position: relative !important;
+    }
+
+    .mobile-product-menu ul li a {
+        position: relative;
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .mobile-product-menu ul li a.heading {
+        background: #eee;
+        color: #000000;
+    }
+
+    .mobile-product-menu ul li:last-child a.heading {
+        border-bottom: none;
+    }
+
+    a[data-toggle="collapse"]:after {
+        content: '+';
+        position: relative;
+        float: right;
+        font-size: 30px;
+        font-weight: 600;
+
+    }
+
+    a[data-toggle="collapse"][aria-expanded="true"]:after {
+        content: '-';
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product-caption .sold {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .title-block h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .countdown span {
+        max-width: 60px;
+        max-height: 60px;
+        width: 100%;
+        height: 100%;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .product.light .product-caption .product-price {
+        font-size: 13px;
+    }
+
+    .yamm-fw .dropdown-menu.mobile {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .yamm .dropdown.yamm-fw.open .dropdown-menu.mobile {
+        display: block;
+    }
+
+    .revolution-container h1 {
+        margin-top: 0;
+        font-size: 30px;
+    }
+
+    .revolution-container h2 {
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .product.light .description {
+        display: none;
+    }
+
+    .product.light .product-new {
+        font-size: 12px;
+        width: 70px;
+        height: 35px;
+        top: -8px;
+        left: -25px;
+    }
+
+    .product.light .product-sale {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+    }
+
+    .header-for-light h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .header-for-light .toolbar-for-light {
+        display: none;
+    }
+}
