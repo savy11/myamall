@@ -6,7 +6,7 @@
  {
   const connection = true;
   const host = 'localhost';
-  const user = 'root';
-  const pass = 'shubh';
-  const db = 'myamall';
+  const user = 'DB_USERNAME';
+  const pass = 'DB_PASSWORD';
+  const db = 'DB_NAME';
  }
