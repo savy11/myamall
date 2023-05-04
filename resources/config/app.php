@@ -48,20 +48,10 @@
  define('tw_site', '');
  
  //Paystack
- // Live Keys
- define('ps_secret_key', 'sk_live_2fd678f9fa52633396b3ae400a15e4d5bdba27da');
- define('ps_public_key', 'pk_live_e783f5096e716d1e6e326d617a2b69e3d0c6d71d');
- 
- // Test Keys
- define('test_ps_secret_key', 'sk_test_eaed10c636ca7603f5de52b26f34a89f2a784689');
- define('test_ps_public_key', 'pk_test_54a1a080d9cbe2282b6cd749db2d2bbbb2f5e8b6');
-
+ define('ps_secret_key', 'PAYSTACK_SECRET_KEY');
+ define('ps_public_key', 'PAYSTACK_PUBLIC_KEY');
 
  //UBA
 // Live Keys
-define('uba_secret_key', 'sk_live_2fd678f9fa52633396b3ae400a15e4d5bdba27da');
-define('uba_public_key', 'pk_live_e783f5096e716d1e6e326d617a2b69e3d0c6d71d');
- 
-// Test Keys
-define('test_uba_secret_key', 'SBTESTSECK_Z91KdeqGpd6Td0VTuXAQcfVwgdOwFjGSgqgFD1R6');
-define('test_uba_public_key', 'SBTESTPUBK_5SRp7zcFTZ4fSJT72Xtt0gCR7CNSJdlA');
+define('uba_secret_key', 'UBA_SECRET_KEY');
+define('uba_public_key', 'UBA_PUBLIC_KEY');
